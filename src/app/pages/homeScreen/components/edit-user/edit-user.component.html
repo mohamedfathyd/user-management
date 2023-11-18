@@ -1,0 +1,30 @@
+<div fxFlex fxLayoutAlign="start" class="dashboard" [dir]="language.direction">
+    <div fxFlex.gt-md="100" fxFlex="100" class="new-notif__side-menu">
+          <notif-top-bar></notif-top-bar>
+          <div class="content">
+            <form [formGroup]="userCritria" style="flex-direction: column;">
+            <div class="col-8">
+                <h6>{{language.name}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input  formControlName="name" type="text">
+                </div>
+            </div>
+            <div class="col-8">
+                <h6>{{language.email}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input  formControlName="email" type="text">
+                </div>
+            </div>
+            <div class="col-8">
+                <h6>{{language.phone}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input  formControlName="phone" type="text">
+                </div>
+            </div>
+            <button class="content_save"  [disabled]="!userCritria.valid" (click)="next()">
+                <div class="content_text">  {{language.confirm}}  </div>
+              </button>
+            </form>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="sidebar" [ngClass]="{ 'expanded': isExpanded,'language-ar':lang=='ar',
+'language-en':lang=='en' }">
+    <div class="header" (click)="handleSidebarToggle()">
+        <img class="logo__icon" [ngClass]="{'language-ar':lang=='ar',
+        'language-en':lang=='en' }" src="assets/icons/logo_bot.svg" alt="Loading">
+     </div>
+    <div class="content">
+     <div class="link with-children">
+        <div class="content" [ngClass]="{'language-ar':lang=='ar',
+        'language-en':lang=='en' }"
+         (click)="display('child-13','child-13-a','child-13-b')" [routerLinkActive]="'active'">
+          <div class="icon">
+            <i class="fa-solid fa-message"></i>
+          </div>
+          <div class="title">{{language.view}}</div>
+          <i id="child-13-a"  [style.display]=" active? 'none': 'block'"
+          [ngClass]="{'language-ar':lang=='ar',
+        'language-en':lang=='en' }" class="fa-solid fa-angle-right  right-icon"></i>
+          <i id="child-13-b" [style.display]=" active? 'block': 'none'" class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="children" id="child-13" [style.display]=" active? 'block': 'none'">
+          <div class="link" *ngIf="adminView">
+            <div class="content" [routerLink]="['/homeScreen/admin']" [queryParams]="{ 'child': '1' }"
+              [routerLinkActive]="'active'">
+              <div class="title" [ngClass]="{'language-ar':lang=='ar',
+              'language-en':lang=='en' }">{{language.viewAdmin}}</div>
+            </div>
+          </div>
+          <div class="link">
+            <div class="content" [routerLink]="['/homeScreen/user']"
+              [routerLinkActive]="'active'">
+              <div class="title" [ngClass]="{'language-ar':lang=='ar',
+              'language-en':lang=='en' }">{{language.viewUser}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="footer"></div>
+  </div>

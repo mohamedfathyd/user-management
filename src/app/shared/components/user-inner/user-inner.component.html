@@ -1,0 +1,43 @@
+<ng-container>
+  <div class="content">
+ <h4>
+  customer
+ </h4>
+ <h5>
+ 
+ </h5>
+ <h6>
+  
+ </h6>
+ <div class="under-line"></div>
+ <div class="setting">
+ accountSetting
+ </div>
+ <div class="under-line"></div>
+ <div class="setting">
+  <div class ="row">
+    <div class="col">
+  {{language.lang}}
+  </div>
+ <div class="col" (click)="changelanguage()">
+    <div class="lang">
+      {{language.language}}
+      <img *ngIf="storageLanguage==langaugeEnum.ar" src="assets/icons/united-states.svg" style="width:10px;border-radius: 50px;">
+      <img *ngIf="storageLanguage==langaugeEnum.en" src="assets/icons/saudi-arabia.svg" style="width:10px;border-radius: 50px;">
+    </div>
+  </div>
+</div>
+  </div>
+ <div class="under-line"></div>
+ <div class="setting" (click)="logOut()">
+  <div class ="row">
+    <div class="col-8">
+      {{language.logOut}}
+    </div>
+    <div class="col">
+      <img src="assets/icons/logOut.svg">
+    </div>
+  </div>
+</div>
+</div>
+</ng-container>

@@ -1,0 +1,20 @@
+<div class="notifier">
+  <div class="notifier__box">
+    <h4 class="notifier__title" [ngClass]="{
+        'notifier__title--success': notifier.type === 'success',
+        'notifier__title--error': notifier.type === 'error'
+      }">{{ notifier.msg }}</h4>
+      <h4 class="sub-message">{{ notifier.subMsg }}</h4>
+    <div class="notifier__icon-holder" [ngClass]="{
+        'notifier__icon-holder--success': notifier.type === 'success',
+        'notifier__icon-holder--error': notifier.type === 'error'
+      }">
+      <img class="notifier__icon"
+        [src]="'assets/icons/' + (notifier.type === 'success' ? 'check' : 'error') + '-in-circle.svg'"
+        alt="status icon">
+    </div>
+    <div (click)="closeNotifier()" class="btn btn--white-green btn--block btn--rounded">
+      {{ language.ok }}
+    </div>
+  </div>
+</div>

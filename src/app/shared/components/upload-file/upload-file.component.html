@@ -1,0 +1,10 @@
+<div class="upload-img">
+  <input  class="upload-img__input" type="file" accept=".pdf,.doc,.docx,.txt,.xlsx,.xls" (input)="fileChanged($event)" [name]="name" [id]="name">
+  <label class="upload-img__label" [for]="name">
+    <div class="btn btn--gray">"{{ language.uploadFilepdf }}"</div>
+    <span class="upload-img__label-text" [class.upload-img__label-text--error]="error">
+      {{ error || fileName || label }}
+    </span>
+  </label>
+  <div class="upload-img-hint">{{ language.maxFileSize }}</div>
+</div>

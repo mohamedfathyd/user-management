@@ -1,0 +1,16 @@
+<div class="confirm">
+    <div class="confirm__box" [ngClass]="{
+    'openDialog':(openDialog==true&&storageLanguage==langaugeEnum.en),
+    'closeDialog':(openDialog==false&&storageLanguage==langaugeEnum.en),
+    'openDialog-ar':(openDialog==true&&storageLanguage==langaugeEnum.ar),
+    'closeDialog-ar':(openDialog==false&&storageLanguage==langaugeEnum.ar),
+    'language-ar':storageLanguage==langaugeEnum.ar,
+    'language-en':storageLanguage==langaugeEnum.en}">
+      <img (click)="close()" align="right" class="close-dialog" src="assets/icons/exit-red.svg" width="25" height="25">
+   
+      <h4 class="confirm__title">notifications </h4>
+      <div class="confirm__button_div">
+    </div>
+    </div>
+  </div>
+  

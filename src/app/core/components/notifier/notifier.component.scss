@@ -1,0 +1,55 @@
+@import "./../../../core/styles/_variables.scss";
+
+.notifier {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(22, 22, 22, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    width: 35%;
+    min-height: 340px;
+    height: calc(100vh - 300px);
+    padding: 30px 30px;
+    background-color: #f8f9fb;
+    border-radius: 10px;
+  }
+  &__title {
+    color: #2a2a2a;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  &__icon-holder {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 34px;
+    margin: 20px auto;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+
+    &--success {
+      background-image: linear-gradient(to bottom, #7fc0a6, #4ca782);
+    }
+    &--error {
+      background-image: linear-gradient(to bottom, #f66, #c00);
+    }
+  }
+  &__icon {
+    width: 100%;
+  }
+  .sub-message{
+    color: #c00;
+    font-weight: bold;
+  }
+}

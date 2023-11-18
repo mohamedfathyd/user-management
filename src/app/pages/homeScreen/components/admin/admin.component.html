@@ -1,0 +1,37 @@
+<div fxFlex fxLayoutAlign="start" class="dashboard" [dir]="language.direction">
+    <div fxFlex.gt-md="100" fxFlex="100" class="new-notif__side-menu">
+          <notif-top-bar></notif-top-bar>
+
+          <div class="table-content">
+            <table style="display: table;" datatable [dtTrigger]="dtTrigger" class="table table-responsive"
+                id="datatable" #datatable>
+                <thead>
+                    <tr>
+                        <th> {{language.name}} </th>
+                        <th> {{language.email}} </th>
+                        <th> {{language.phone}} </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let data of usersList; let i = index">
+                        <td>{{data.name}}</td>
+                        <td>{{data.email}} </td>
+                        <td>{{data.phone}} </td>    
+                        <td (click)="editUser(data)"><span class="px-4 text-white"
+                                style="background-color: #A4BBED;border-radius: 4px;">{{language.edit}}</span> </td>
+                        <td (click)="deleteUser(i)"><span class="px-4 text-white"
+                                style="background-color: #DB4242;border-radius: 4px;">{{language.delete}}</span> </td>
+                    </tr>
+                    <td (click)="addUser()"> <span class="px-4 text-white"
+                        style="background-color: #64C882;border-radius: 4px;">{{language.add}}</span> </td>
+                
+                </tbody>
+            </table>
+          </div>
+    </div>
+    <loading *ngIf="loading"></loading>
+</div>

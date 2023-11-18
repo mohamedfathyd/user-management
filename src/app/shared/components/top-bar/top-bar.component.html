@@ -1,0 +1,32 @@
+<div class="top-bar">
+    <div [ngClass]="{'language-ar':storageLanguage==langaugeEnum.ar,
+    'language-en':storageLanguage==langaugeEnum.en }">
+  <img *ngIf="!alarmView" src="./assets/images/notifi.png" class="notifi" alt="metronic" (click)="notificationPage()" />
+  <img *ngIf="alarmView" src="./assets/images/no.gif" class="notifi-alarm" alt="metronic" (click)="notificationPage()" />
+  <div
+    class="cursor-pointer symbol"
+    data-kt-menu-trigger="click"
+    data-kt-menu-attach="parent"
+    data-kt-menu-placement="bottom-end"
+    data-kt-menu-flip="bottom"
+  >
+    <img src="./assets/images/blank.png" class="avatar" alt="metronic" />
+  </div>
+  <label>{{customerName}}</label>
+  <div clickOutside (clickOutside)="clickedOutside()">
+  <div
+    style="cursor: pointer;"
+    class="symbol-30px symbol-md-40px"
+    data-kt-menu-trigger="click"
+    data-kt-menu-attach="parent"
+    data-kt-menu-placement="bottom-end"
+    data-kt-menu-flip="bottom"
+    (click)="viewMenu()"  
+  >
+  <img src="./assets/icons/dots.svg" class="dots-menu" alt="metronic" />
+  </div>
+</div>
+</div>
+
+<app-user-inner [ngClass]="{'language-ar ':storageLanguage==langaugeEnum.ar,
+'language-en ':storageLanguage==langaugeEnum.en}" class="header-item-menu" *ngIf="viewed"></app-user-inner>

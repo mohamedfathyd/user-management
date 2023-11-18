@@ -1,0 +1,40 @@
+@import "./../../../core/styles/_variables.scss";
+
+.upload-img {
+  margin: 20px 0;
+  position: relative;
+  width: fit-content;
+
+  &__input {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333;
+      margin: 0 20px;
+    
+      &--error {
+        color: $error-red;
+      }
+    }
+  }
+  &-hint{
+    font-size: 12px;
+  }
+}

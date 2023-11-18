@@ -1,0 +1,24 @@
+@import "./../../../core/styles/variables";
+.new-notif {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  
+    &__side-menu {
+      width: 18%;
+    }
+  
+    &__content {
+      height: 77%;
+    }
+    &__title{
+      margin-inline-start: 130px;
+      margin-top: 10px;
+      display: flex;
+      font-weight: 500;
+    }
+  }
+  .dashboard{
+     background-color: transparent;
+      
+  }

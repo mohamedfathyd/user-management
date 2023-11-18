@@ -1,0 +1,31 @@
+<div fxFlex fxLayoutAlign="start" class="dashboard" [dir]="language.direction">
+    <div fxFlex.gt-md="100" fxFlex="100" class="new-notif__side-menu">
+          <notif-top-bar></notif-top-bar>
+          <div class="content">
+            <form [formGroup]="userCritria" style="flex-direction: column;">
+            <div class="col-8">
+                <h6>{{language.name}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input disabled formControlName="name" type="text">
+                </div>
+            </div>
+            <div class="col-8">
+                <h6>{{language.email}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input disabled formControlName="email" type="text">
+                </div>
+            </div>
+            <div class="col-8">
+                <h6>{{language.phone}} <label class="dot">*</label> </h6>
+                <div class="input-style">
+                    <input disabled formControlName="phone" type="text">
+                </div>
+            </div>
+            <button class="content_save" (click)="next()">
+                <div class="content_text">  {{language.edit}}  </div>
+              </button>
+              <loading *ngIf="loading"></loading>
+              </form>
+          </div>
+    </div>
+</div>

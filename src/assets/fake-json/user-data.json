@@ -1,0 +1,15 @@
+{"success":true,
+"message":"Login Sucessfully",
+"description":"",
+"data":{
+    "token":"hafkjlshfjklsdahfksdlajhfd",
+    "username":"User",
+    "firstName":"Mohamed",
+    "lastName":"Fathy",
+    "email":"asdasd@adsas.com",
+    "name":"Mohamed Fathy",
+    "phone":"9656565",
+    "refreshToken":"afsdjkjfhsdklafhlkdhsafkjlds",
+    "type":"user"
+}
+}

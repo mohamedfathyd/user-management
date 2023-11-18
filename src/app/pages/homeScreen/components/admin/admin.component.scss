@@ -1,0 +1,110 @@
+.new-notif {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  
+    &__side-menu {
+      width: 18%;
+    }
+  
+    &__content {
+      height: 77%;
+    }
+    &__title{
+      margin-inline-start: 130px;
+      margin-top: 10px;
+      display: flex;
+      font-weight: 500;
+    }
+  }
+  .close-dialog{
+    cursor: pointer;
+    margin-inline-start: 10px;
+  }
+  .dashboard{
+     background-color: transparent;
+      
+  }
+.btn-create-survey {
+    background: #0B2A4F 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    margin-top: 8px;
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+}
+
+.modal-title {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #000000;
+}
+.label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+.input {
+    background: #f6f8fa 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    border: none;
+}
+.box {
+    background-color: #ffffff;
+    box-shadow: 0.5px 2px 4px #7777770a;
+    border-radius: 3px;
+    padding: 50px;
+    margin: 60px 60px;
+    margin-top: 12%;
+}
+.title {
+    padding-bottom: 50px;
+    border-bottom: 1px dashed #dfdfe2;
+}
+.btn-survey-title {
+    background: #e8f5ed 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: #0B2A4F;
+    border: none;
+    padding: 7px 16px;
+}
+.btn-edit {
+    background: #f6f8fa 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5E6278;
+    border: none;
+    padding: 5px 16px;
+    margin: 0px 7px;
+}
+.table-content{
+    margin:90px 20px 20px 20px ;
+}
+.text-white{
+    cursor: pointer;
+}
+.btn-submit-question {
+    background: #e1b52b 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+    margin-top: 20px;
+    outline: none;
+}

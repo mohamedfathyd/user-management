@@ -1,0 +1,66 @@
+@import "./variables.scss";
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  height: 34px;
+  padding: 0 20px;
+  border-radius: 2px;
+  font-weight: 500;
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $yellow-button;
+    color: #fff;
+
+    &:disabled {
+      background-color: #b2d9c9;
+      box-shadow: 0 1.5px 2.5px 0 rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+      cursor: initial;
+    }
+  }
+  &--primary-bordered {
+    border: 1px solid #fff;
+  }
+  &--rounded {
+    border-radius: 8px;
+  }
+  &--gray {
+    background-color: #cfd8dc;
+    box-shadow: 0 1.5px 2.5px 0 rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  &--white-green {
+    color: white !important;
+    border: 1px solid $lighter-green !important;
+    background-color: $primary-green !important;
+  }
+  &--white-red {
+    color: black !important;
+    border: 1px solid $ligther-gray !important;
+    background-color: $ligther-gray !important;
+  }
+  &--has-margin {
+    margin: 0 10px;
+  }
+  &--block {
+    width: 100%;
+  }
+  &--small {
+    min-width: 70px;
+    padding: 0;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+}

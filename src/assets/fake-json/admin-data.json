@@ -1,0 +1,12 @@
+{"success":true,
+"message":"Login Sucessfully",
+"description":"",
+"data":{
+    "token":"hafkjlshfjklsdahfksdlajhfd",
+    "username":"Admin",
+    "firstName":"Ahmed",
+    "lastName":"Fathy",
+    "refreshToken":"afsdjkjfhsdklafhlkdhsafkjlds",
+    "type":"admin"
+}
+}

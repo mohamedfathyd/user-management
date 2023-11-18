@@ -1,0 +1,10 @@
+<div class="notifier" [ngClass]="{'language-ar':storageLanguage==langaugeEnum.ar,
+'language-en':storageLanguage==langaugeEnum.en}">
+    <div class="notifier__box">
+        <img (click)="close()" align="right" class="close-dialog" src="assets/icons/exit-red.svg" width="25" height="25">
+ 
+<div mat-dialog-content align="center" style="margin: 10px;">
+  <img  [src]="this.finalPdf" style="width: 40%;" />
+</div>
+        </div>
+        </div>

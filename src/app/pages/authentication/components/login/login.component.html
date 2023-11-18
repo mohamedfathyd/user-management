@@ -1,0 +1,47 @@
+<div class="login" [ngClass]="{'language-ar':lang=='ar','language-en':lang=='en' }">
+  <div class="grid">
+    <div class="row">
+      <div class="col-sm-6 col-content">
+        <img src="assets/icons/logo_bot.svg" class="login__logo" alt="Logo">
+        <div>
+          <h2>{{language.dashboard}}</h2>
+          <h5>{{language.gDesc}}</h5>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="login__box">
+          <form [formGroup]="loginForm" class="login__form">
+            <h3 class="login__form__title"> {{ language.login }}</h3>
+            <div class="form-group">
+              <label>{{language.userName}}</label>
+              <img class="form-group__control-icon" src="assets/icons/username.svg" [alt]="language.userNameIcon">
+              <input (keyup.enter)="validateForm()"
+                class="form-group__control form-group__control--rounded form-group__control--has-icon"
+                [placeholder]="language.userName" name="UserName" formControlName="username" type="text">
+              <div *ngIf="f.username.touched && f.username.errors" class="form-group__error-msg">
+                <div *ngIf="f.username.errors.required">{{ language.requiredField }}</div>
+                <div *ngIf="f.username.errors.pattern">{{ language.invalidInput }}</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>{{language.password}}</label>
+              <img class="form-group__control-icon" src="assets/icons/password.svg" [alt]="language.userNameIcon">
+              <input (keyup.enter)="validateForm()"
+                class="form-group__control form-group__control--rounded form-group__control--has-icon"
+                [placeholder]="language.password" name="Password" formControlName="password" type="password">
+              <div *ngIf="f.password.touched && f.password.errors" class="form-group__error-msg">
+                <div *ngIf="f.password.errors.required">{{ language.requiredField }}</div>
+                <div *ngIf="f.password.errors.pattern">{{ language.invalidInput }}</div>
+              </div>
+            </div>
+            <div (click)="validateForm()" class="btn btn--primary btn--rounded login__btn-marge">
+              {{ language.login }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <loading *ngIf="loading"></loading>
+</div>

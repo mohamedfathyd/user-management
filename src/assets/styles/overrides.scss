@@ -1,0 +1,105 @@
+/**
+to override any encapsulated styling provided by libraries or components
+ */
+
+/**
+  override letter-spacing for arabic text in inputs
+ */
+.mat-form-field {
+  letter-spacing: normal;
+  font-family: 'Raleway', Roboto, sans-serif !important;
+}
+
+.mat-tab-label {
+  height: auto !important;
+  font-family: 'Raleway', Roboto, sans-serif !important;
+}
+
+.mat-select {
+  font-family: 'Raleway', Roboto, sans-serif !important;
+
+  .mat-option {
+    font-family: 'Raleway', Roboto, sans-serif !important;
+  }
+}
+
+/**
+override mat option styling for customers dropdown as it's not rendered in any component ( not encapsulated )
+ */
+
+
+.notification_selector {
+  .mat-tab-label {
+    height: auto !important;
+    padding: 10px;
+
+    h3 {
+      margin: 0 0 5px;
+    }
+  }
+
+
+}
+
+.customer-options {
+  height: auto !important;
+  padding: 5px 16px !important;
+
+  .customer-name {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .account_number {
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  &.odd {
+    background: #f2f2f2;
+  }
+}
+
+.required-asterisk {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 8px);
+
+  &.inline {
+    position: relative;
+    right: auto;
+    top: auto;
+    display: inline-flex;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+button {
+  &.mat-preview {
+    background-color: #FAAC14;
+    color: #fff;
+  }
+  &.mat-dark {
+    background-color: #495054;
+    color: #fff;
+  }
+
+
+  &.btnOutlined {
+    background: #fff;
+    color: #495054;
+    border-color: #495054;
+    border-width: 1px;
+  }
+}
+
+
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option:hover {
+  background: $primary-green;
+  color: #fff;
+}
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  background: $primary-green;
+  color: #fff;
+}

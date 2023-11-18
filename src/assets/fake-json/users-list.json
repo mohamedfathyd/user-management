@@ -1,0 +1,27 @@
+{"data": [
+      {
+        "id": 1,
+        "name": "mohamed fathy",
+        "username":"user",
+        "phone":"9321654",
+        "email":"lahdjksa@adas.com",
+        "type":"user"
+      },
+      {
+        "id": 2,
+        "name": "Fathy sadas",
+        "username":"user",
+        "phone":"9321654",
+        "email":"gewrjwe@gamil.com",
+        "type":"user"
+      },
+      {
+        "id": 3,
+        "name": "ahmed sadas",
+        "phone":"9321654",
+        "username":"user",
+        "email":"gewrjwe@gamil.com",
+        "type":"user"
+      }
+    ]
+}

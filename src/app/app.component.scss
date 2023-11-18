@@ -1,0 +1,16 @@
+.content {
+    &.language-en{
+      margin-left: 60px;
+      transition: 0.3s;
+      &.sidebarExpanded {
+        margin-left: 230px;
+      }
+    }
+    &.language-ar{
+      margin-right: 60px;
+      transition: 0.3s;
+      &.sidebarExpanded {
+        margin-right: 230px;
+      }
+    }
+    }

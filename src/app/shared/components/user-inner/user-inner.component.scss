@@ -1,0 +1,31 @@
+@import "./../../../core/styles/variables";
+
+.content{
+  background-color: rgba(255, 255, 255, 0.767);
+  color: #2F2F2F;;
+  border-radius: 8px;
+  padding: 22px 14px;
+  width: 155px;
+.under-line{
+    border-bottom: 0.7px solid $ligther-gray;
+    margin-top: 8px;
+  }
+ 
+  .setting{
+   font-weight: 500;
+   margin-top: 8px;
+   cursor: pointer;
+   font-size: 12px;
+  }
+  img{
+    width: 15px;
+  }
+  .lang{
+    font-size: 9px;
+    background: #E0E0E0;
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 3px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,169 @@
+@import "./variables.scss";
+
+.form-group {
+  width: 100%;
+  margin: 10px 0 10px;
+  position: relative;
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--no-margin {
+    margin: 0 10px;
+  }
+
+  &--checkbox {
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+
+    &--required {
+      &::after {
+        content: "*";
+        font-size: 1rem;
+        color: #ff5274;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    top: -5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    &--required {
+      &::after {
+        content: "*";
+        font-size: 1rem;
+        color: #ff5274;
+      }
+    }
+  }
+
+  &__control {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 0.5px solid #dddfe1;
+    background-color: #f6f6f9;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--small {
+      height: 32px;
+    }
+    &--textarea {
+      height: 102px;
+      padding: 10px;
+      resize: none;
+    }
+    &--rounded {
+      border-radius: 10px;
+    }
+    &--has-icon {
+      padding-left: 50px;
+      overflow: hidden;
+    }
+
+    &.ng-invalid.ng-dirty,
+    &.ng-invalid.ng-touched,
+    &--wrong {
+      border: 0.5px solid #c00 !important;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.27);
+      }
+    }
+  }
+
+  &__checkbox {
+    outline: none;
+    height: 25px;
+    width: 55px;
+    border-radius: 50px;
+    -webkit-appearance: none;
+    position: relative;
+    background: #dddfe1;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+
+    &:checked {
+      background: #45b173;
+
+      &::before {
+        left: 0;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 29.5px;
+      height: 100%;
+      width: 25px;
+      background: linear-gradient(#fff, #f2f2f2, #e6e6e6, #d9d9d9);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 50px;
+      transform: scale(0.85);
+      transition: left 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &-label {
+      color: rgba(51, 51, 51, 0.87);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin: 0 8px;
+      cursor: pointer;
+    }
+  }
+
+  &__emoji-picker {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    cursor: pointer;
+  }
+
+  &__error-msg {
+    left: 0;
+    font-size: 1rem;
+    color: #c00;
+    text-align: end;
+    z-index: 1;
+    bottom: -14px;
+
+    &--lighter {
+      color: #c00;
+    }
+  }
+  &__size-msg {
+    position: absolute;
+    right: 0;
+    font-size: 0.6rem;
+    color: rgb(12, 12, 12);
+    text-align: left;
+    z-index: 1;
+    bottom: -14px;
+
+    &--lighter {
+      color: #c00;
+    }
+  }
+
+  &__control-icon {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    padding: 8px;
+    padding-right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 20px 20px 0;
+  }
+}

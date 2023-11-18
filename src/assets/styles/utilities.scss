@@ -1,0 +1,38 @@
+/**
+file for shared utilities classes to be used in styling
+ */
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.bg_success {
+  background-color: #45b173;
+}
+
+.fill_success {
+  fill: #45b173;
+}
+
+.text_success {
+  color: #45b173;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content {
+  justify-content: center;
+}
+.unicode-bidi-embed {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.py-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
